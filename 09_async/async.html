@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async</title>
+  </head>
+  <body>
+    <h1>Good Morning Duniyavalo</h1>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+    const saysagar = function () {
+      console.log("sagar");
+    };
+    const changeTest = function () {
+      document.querySelector("h1").innerHTML = "Best Person in the world";
+    };
+
+    const changeMe = setTimeout(changeTest, 2000);
+
+    document.querySelector("#stop").addEventListener("click", function () {
+      clearTimeout(changeMe);
+      console.log("STOPPED");
+    });
+  </script>
+</html>
